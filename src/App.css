@@ -3,6 +3,9 @@
   width: 155px;
   height: 240px;
   border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .logo {
@@ -11,38 +14,64 @@
 }
 
 button {
-  margin: 0 2px;
+  margin: 1px 3px;
+  height: 30px;
+  width: 30px;
 }
 
 .numberButtons {
   display: flex;
   flex-wrap: wrap;
-  border: 1px solid blue;
-  height: 100px;
+  height: 130px;
+  width: 110px;
+}
+
+.operatorButtons {
+  display: flex;
+  flex-direction: column;
+  width: 35px;
+  height: 170px;
+  margin-left: 110px;
+  margin-top: -162px;
+}
+
+.specialButtons {
+  margin-top: 10px;
 }
 
 .numberButton {
   background: #0f4173;
   color: white;
   border-radius: 50px;
-  height: 30px;
-  width: 30px;
 }
 
 .operatorButton {
   background: #007191;
   color: white;
   border-radius: 50px;
-  height: 30px;
-  width: 30px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .specialButton {
   background: #08609c;
   color: white;
   border-radius: 50px;
+}
+
+.display {
+  border: 1px solid blue;
+  width: 140px;
   height: 30px;
-  width: 30px;
+  background: #323335;
+  border-radius: 25px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.displayText {
+  color: white;
+  margin: 5px 5px 0 0;
 }
