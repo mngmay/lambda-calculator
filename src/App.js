@@ -35,6 +35,12 @@ function App() {
     if (specialB === "C") {
       setDisplayNum(0);
     }
+    if (specialB === "+/-") {
+      setDisplayNum(displayNum * -1);
+    }
+    if (specialB === "%") {
+      setDisplayNum(displayNum / 100);
+    }
   };
 
   return (
