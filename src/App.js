@@ -19,7 +19,7 @@ function App() {
   // the "5" button, or the operator if they click one of those buttons) and then call your setter function to update state.
   // Don't forget to pass the functions (and any additional data needed) to the components as props
 
-  const [displayNum, setDisplayNum] = useState(0);
+  const [displayNum, setDisplayNum] = useState("");
   const addNumber = number => {
     setDisplayNum(displayNum + number);
   };
@@ -33,7 +33,7 @@ function App() {
 
   const specialMagic = specialB => {
     if (specialB === "C") {
-      setDisplayNum(0);
+      setDisplayNum("");
     }
     if (specialB === "+/-") {
       setDisplayNum(displayNum * -1);
