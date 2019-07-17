@@ -7,9 +7,10 @@ import OperatorButton from "./OperatorButton";
 
 //Import your array data to from the provided data file
 
-const Operators = () => {
+const Operators = props => {
   // STEP 2 - add the imported data to state
   const [operatorState, setOperatorState] = useState(operators);
+  const { addOperator } = props;
 
   return (
     <div className="operatorButtons">
@@ -18,12 +19,14 @@ const Operators = () => {
        it any props needed by the child component*/}
 
       {/* Because operators is an array of objects, we have to access that part as object.char and object.value based on what's in the arrays */}
-      {operatorState.map((operator, index) => {
+      {operatorState.map(operator => {
+        //index is an optional parameter to take care of React's "unique key" error
         return (
           <OperatorButton
-            operator={operator.char}
+            char={operator.char}
             value={operator.value}
-            key={index}
+            addOperator={addOperator}
+            key={operator.char}
           />
         );
       })}
