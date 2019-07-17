@@ -30,13 +30,20 @@ function App() {
       setDisplayNum(displayNum + " " + operator + " ");
     }
   };
+
+  const specialMagic = specialB => {
+    if (specialB === "C") {
+      setDisplayNum(0);
+    }
+  };
+
   return (
     <div className="container">
       <Logo />
       <div className="App">
         {/* STEP 4 - Render your components here and be sure to properly import/export all files */}
         <Display number={displayNum} setDisplayNum={setDisplayNum} />
-        <Specials />
+        <Specials specialMagic={specialMagic} />
         <Numbers addNumber={addNumber} />
         <Operators addOperator={addOperator} />
       </div>
